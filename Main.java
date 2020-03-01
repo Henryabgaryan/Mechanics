@@ -238,8 +238,8 @@ public class Main {
        double back_car_displacement = back_car_initial_speed*yellow_light_duration + (back_car_positive_acceleration*Math.pow(yellow_light_duration, 2))/2;
 
        //this variables show how much car will go after break is pushed
-       double front_car_how_much_go_to_stop = front_car_initial_speed*yellow_light_duration + (front_car_negative_acceleration*Math.pow(yellow_light_duration, 2))/2;
-       double back_car_how_much_go_to_stop = back_car_initial_speed*yellow_light_duration + (back_car_negative_acceleration*Math.pow(yellow_light_duration, 2))/2;
+       double front_car_how_much_go_to_stop = front_car_initial_speed*yellow_light_duration - (front_car_negative_acceleration*Math.pow(yellow_light_duration, 2))/2;
+       double back_car_how_much_go_to_stop = back_car_initial_speed*yellow_light_duration - (back_car_negative_acceleration*Math.pow(yellow_light_duration, 2))/2;
 
         double front_car_speed = front_car_initial_speed + front_car_positive_acceleration*yellow_light_duration/2;
        double back_car_speed = back_car_initial_speed + back_car_positive_acceleration*yellow_light_duration/2;
